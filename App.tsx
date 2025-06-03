@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header.tsx';
+import Bottom from './components/Bottom.tsx';
 
 import { Provider } from "./components/ui/provider";
-import { AuthProvider } from './src/contexts/AuthContext';
+//import { AuthProvider } from './src/contexts/AuthContext';
 
 // Lazy load all the page components
 const HomePage = React.lazy(() => import('./src/home/page.tsx'));
@@ -14,7 +15,6 @@ const SignInPage = React.lazy(() => import('./src/sign-in/page.tsx'));
 
 function App() {
   return (
-    <AuthProvider>
       <Provider>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
@@ -31,12 +31,11 @@ function App() {
                 </Routes>
               </React.Suspense>
             </main>
-
+            <Bottom />
             
           </div>
         </Router>
       </Provider>
-    </AuthProvider>
   );
 }
 
