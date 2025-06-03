@@ -15,6 +15,7 @@
     "@emotion/styled": "^11.14.0",
     "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
     "@heroicons/react": "^2.2.0",
+    "@tavus/js": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "firebase": "^11.6.1",
     "framer-motion": "^6.5.1",
