@@ -22,7 +22,7 @@ function App() {
             <Header />
 
             <main className="container mx-auto px-6 py-16">
-              <React.Suspense fallback={<Loading size="lg" text="Loading page..." />}>
+              <React.Suspense fallback={<Loading size="lg\" text="Loading page..." />}>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/daily" element={<DailyPage />} />
