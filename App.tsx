@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header.tsx';
 import Bottom from './components/Bottom.tsx';
+import Loading from './src/components/Loading.tsx';
 
 import { Provider } from "./components/ui/provider";
 //import { AuthProvider } from './src/contexts/AuthContext';
@@ -21,7 +22,7 @@ function App() {
             <Header />
 
             <main className="container mx-auto px-6 py-16">
-              <React.Suspense fallback={<div>Loading...</div>}>
+              <React.Suspense fallback={<Loading size="lg" text="Loading page..." />}>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/daily" element={<DailyPage />} />
